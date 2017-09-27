@@ -18,6 +18,8 @@ public class Inlämningsuppgift01 {
         System.out.println(" Hello Git");
         
         System.out.println(" Detta var en krånglig uppgift");
+        
+        System.out.println(" ");
     }
     
 }
