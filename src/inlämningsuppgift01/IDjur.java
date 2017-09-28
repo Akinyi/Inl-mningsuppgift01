@@ -15,5 +15,5 @@ public interface IDjur {
      public String getName();
      public double getVikt();
      public boolean ärDjur();
-     public List<Djur> getAllDjur();
+     
 }

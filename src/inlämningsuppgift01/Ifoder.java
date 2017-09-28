@@ -5,11 +5,14 @@
  */
 package inlämningsuppgift01;
 
+
+
 /**
  *
  * @author ägare
  */
 public interface Ifoder {
+  
     public void gefoder();
     public String getName();
     public double getVikt();

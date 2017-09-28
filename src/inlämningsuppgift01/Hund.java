@@ -21,18 +21,16 @@ public class Hund extends Djur implements Ifoder, IDjur {
     }
     
     //List<Hund> hund  = new ArrayList<>();
-    protected Djur Sixten = new Djur ("Sixten", 5000.0, true);
-    protected Djur Dogge = new Djur ("Dogge", 10000.0, true);
-    
-    
-    public List<Djur> getAllDjur(){
-        
-        List<Djur> allDjur = new ArrayList<>();
-        allDjur.add(Sixten);
-        allDjur.add(Dogge);
-        return allDjur;
-    }
-    
+//    protected IDjur Sixten = new Djur ("Sixten", 5000.0, true);
+//    protected Djur Dogge = new Djur ("Dogge", 10000.0, true);
+//    
+//    public void getAllDjur(){
+//        
+//       
+//        return allDjur;
+//    }
+    // POLYMORFISM GENOM ATT SKAPA LIKNANDE INSTANSMETODER I SUBKLASSEN SOM ÖVERSKUGGAR METODEN I SUPERKLASSEN
+    // geFODER METODEN SÖKS NERIFRÅN OCH UPPÅT I KLASSHIERARKIN
     @Override
     public String getName(){
         return namn;
@@ -45,7 +43,7 @@ public class Hund extends Djur implements Ifoder, IDjur {
     
     @Override
     public void gefoder(){
-        JOptionPane.showMessageDialog(null, vikt/100 +  " gm hundfoder");
+        JOptionPane.showMessageDialog(null, (int)vikt/100 +  " gm hundfoder");
     }
     @Override
     public boolean ärDjur(){

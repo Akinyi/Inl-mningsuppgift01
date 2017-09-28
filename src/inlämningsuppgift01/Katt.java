@@ -42,7 +42,7 @@ public class Katt extends Djur implements Ifoder {
     
     @Override
     public void gefoder(){
-        JOptionPane.showMessageDialog(null, vikt/150 +  " gm kattfoder.");
+        JOptionPane.showMessageDialog(null, (int)vikt/150 +  " gm kattfoder.");
     }
     @Override
     public boolean ärDjur(){

@@ -19,15 +19,15 @@ public class Orm extends Djur implements Ifoder {
         super(n,v, djur);
         namn = n; vikt = v; djur = true;
     }
-    protected Djur Hypno = new Djur("Hypno", 1000.0, true);
-    
-    public List<Djur> getAllDjur(){
-        
-        List<Djur> allDjur = new ArrayList<>();
-        allDjur.add(Hypno);
-       
-        return allDjur;
-    }
+////    protected Djur Hypno = new Djur("Hypno", 1000.0, true);
+//    
+//    public List<Djur> getAllDjur(){
+//        
+//        List<Djur> allDjur = new ArrayList<>();
+//        allDjur.add(Hypno);
+//       
+//        return allDjur;
+//    }
     
     @Override
     public String getName(){

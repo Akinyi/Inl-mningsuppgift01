@@ -11,7 +11,7 @@ package inlämningsuppgift01;
  *
  * @author ägare
  */
- public class Djur {
+    public class Djur implements Ifoder, IDjur {
     protected String namn;
     protected double vikt;
     protected boolean djur;
