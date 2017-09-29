@@ -14,20 +14,42 @@ import javax.swing.JOptionPane;
  * Skapar en klass Inlämningsuppgift01 som inte är statisk som main metoden längre ner
  */
 public class Inlämningsuppgift01  {
-
+/**
+ * En protected Konstruktor är ett exempel på inkapsling
+ */
     protected Inlämningsuppgift01(){
-        /*
-    Hund h1 = new Hund("Sixten", 5000.0, true);
-    Hund h2 = new Hund("Dogge", 10000.0, true);
-    Katt k1 = new Katt("Venus", 5000.0, true);
-    Katt k2 = new Katt("Ove", 3000.0, true);
-    Orm o1 = new Orm("Hypno", 1000.0, true);
     
-    System.out.println("Hunden " + h1.getName());
-
-    */
-      // DYNAMISK BINDNING GENOM ATT DEN SKAPAR NYA REFERENSVARIABLER TILL SUBKLASSERNA
+      // DYNAMISK BINDNING GENOM ATT LIST<Ifoder> ifo SKAPAS SOM I SIN TUR FÅR
+      // NYA REFERENSVARIABLER TILL SUBKLASSERNA HUND, KATT OCH ORM. DESSA LÄGGS
+      // IN I LISTAN MED METODEN add(new klass(namn, vikt, boolean));
+      // I WHILE LOOPEN SÅ FÅR DIETCOACHEN EN DIALOGRUTA DÄR HEN FÅR SKRIVA IN 
+      // DJURETS NAMN. NAMNET JÄMFÖRS MED VARJE DJUR I VARJE SUBKLASS MED METODEN
+      // getName.  SKRIVS NAMNET FEL SÅ FÅR COACHEN SKRIVA OM DET. NÄR DET RÄTTA 
+      // NAMNET HAR HITTATS SÅ ANROPAR GRÄNSSNITTET ifo DEN RESPEKTIVA METODEN 
+      // gefoder I SUBKLASS.HÄR SKER DYNAMISK BINDNING.
+      // POLYMORFISM - VARJE GÅNG METOD gefoder ANROPAS SÅ SÖKER DEN NERIFRÅN 
+      // OCH UPPÅT I SUBKLASSERNA TILLS DEN HITTAR DEN RÄTTA METODEN SOM DÅ UTFÖRS.
+      // DIETCOACHEN FÅR EN DIALOGRUTA DÄR DET STÅR NAMNET PÅ DJURET, ANTAL GRAM
+      // FODER OCH TYP AV DJURFODER.
        List<Ifoder> ifo = new ArrayList<>();   
+       ifo.add(new Hund("Sixten", 5000, true));
+       ifo.add(new Hund("Dogge", 10000.0, true));
+       ifo.add(new Katt("Venus", 5000.0, true));
+       ifo.add(new Katt("Ove", 3000.0, true));
+       ifo.add(new Orm("Hypno", 1000.0, true));
+       
+        boolean again = true;
+        while (again){
+            String s = JOptionPane.showInputDialog(" Vilket djur ska få mat? \nAnge ett namn.");
+            if (s == null)
+                break;
+           for(Ifoder a: ifo)
+           if(s.equalsIgnoreCase(a.getName()))
+               a.gefoder();
+        }
+       
+/*
+       //===================================================================
          Ifoder i1 = new Hund("Sixten", 5000.0, true);
          Ifoder i2 = new Hund("Dogge", 10000.0, true);
          Ifoder i3 = new Katt("Venus", 5000.0, true);
@@ -60,16 +82,16 @@ public class Inlämningsuppgift01  {
                 default:
                     System.exit(0);
             }
-            // DYNAMIST BINDNING SORT THIS OUT.
-//            for(int i =0; i<6; i++)
-//           if(s.equalsIgnoreCase(i(i).getName()))
-//               i(i).gefoder();
+
            
         }
-        
-    
+       */ 
+    //==============================================================
     }
-    
+    /**
+     * Main metoden som är public
+     * @param args 
+     */
     
     public static void main(String[] args) {
      /**

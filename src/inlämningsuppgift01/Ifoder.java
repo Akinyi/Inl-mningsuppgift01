@@ -12,9 +12,10 @@ package inlämningsuppgift01;
  * @author ägare
  */
 public interface Ifoder {
-  
+  // INTERFACE Ifoder ÄR EN ABSTRACT KLASS 
     public void gefoder();
     public String getName();
+    public void printName();
     public double getVikt();
     public boolean ärDjur();
 }

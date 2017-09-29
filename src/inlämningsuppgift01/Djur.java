@@ -9,9 +9,13 @@ package inlämningsuppgift01;
 
 /**
  *
- * @author ägare
+ * @author Akinyi
+ * 
+ * Superklassen Djur skapas. Den implementerar Interface Ifoder 
+ * De instansvariablerna är inkapslade med ordet 'protected' vilket skyddar dem
+ * Konstruktorn Djur inkapslas också med protected.
  */
-    public class Djur implements Ifoder, IDjur {
+    public class Djur implements Ifoder {
     protected String namn;
     protected double vikt;
     protected boolean djur;
@@ -20,16 +24,37 @@ package inlämningsuppgift01;
     public Djur(String n, double v, boolean dj){
         namn = n; vikt = v; djur = dj;
     }
-   
+   /**
+    * Metod getName
+    * @return namn
+    */
     public String getName(){
         return namn;
     }
+    /**
+     * Metod printName
+     * 
+     */
+    public void printName(){
+        
+    }
+    /**
+     * Metod getVikt
+     * @return vikt
+     */
     public double getVikt(){
         return vikt;
     }
+    /**
+     * void metod gefoder()
+     */
     public void gefoder(){
     
     }
+    /**
+     * Boolean metod ärDjur
+     * @return djur
+     */
     public boolean ärDjur(){
         return djur;
     }

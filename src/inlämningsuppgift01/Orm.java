@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package inlämningsuppgift01;
 
 import java.util.ArrayList;
@@ -11,38 +7,56 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author ägare
+ * @author Akinyi
+ * En subklass till Djur skapas som heter Orm. Den implementerar Ifoder
+ * Dess konstruktor är protected för att skydda instansvariablerna
  */
 public class Orm extends Djur implements Ifoder {
     
-    public Orm (String n, double v, boolean djur){
+    protected Orm (String n, double v, boolean djur){
         super(n,v, djur);
         namn = n; vikt = v; djur = true;
     }
-////    protected Djur Hypno = new Djur("Hypno", 1000.0, true);
-//    
-//    public List<Djur> getAllDjur(){
-//        
-//        List<Djur> allDjur = new ArrayList<>();
-//        allDjur.add(Hypno);
-//       
-//        return allDjur;
-//    }
-    
+
+
+    /**
+     * överskuggande metod getName returnerar namn på ett Orm objekt
+     * @return namn
+     * Polymorfism och dynamisk bindning sker om ormens namn skrivs ut när denna
+     * metod anropas
+     */
     @Override
     public String getName(){
         return namn;
     }
-    
+    /**
+     * överskuggande metoden printName
+     */
+    @Override
+    public void printName(){
+        JOptionPane.showMessageDialog(null, namn);
+    }
+    /**
+     * överskuggande metod getVikt för subklassen Orm
+     * @return vikt
+     */
     @Override
     public double getVikt(){
         return vikt;
     }
-    
+    /**
+     * Metod gefoder som överskuggar Klassen Djurs metod gefoder. Anropas Orms
+     * gefoder metod så sker polymorfism och dynamisk bindning.
+     */
     @Override
     public void gefoder(){
-        JOptionPane.showMessageDialog(null,  20*vikt/vikt +  " gm ormpellets");
+        JOptionPane.showMessageDialog(null, namn + " : " +  20 +  " gm ormpellets");
     }
+    
+    /**
+     * boolean metod ärDjur som returnerar djur om det är true
+     * @return 
+     */
     @Override
     public boolean ärDjur(){
         return djur;
