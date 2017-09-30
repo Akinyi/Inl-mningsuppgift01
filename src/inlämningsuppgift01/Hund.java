@@ -25,14 +25,14 @@ public class Hund extends Djur implements Ifoder {
     }
     
 
-    // POLYMORFISM GENOM ATT SKAPA LIKNANDE INSTANSMETODER I SUBKLASSEN SOM
-    // ÖVERSKUGGAR METODEN I SUPERKLASSEN.
-    // geFODER METODEN SÖKS NERIFRÅN OCH UPPÅT I KLASSHIERARKIN
+    // POLYMORFISM GENOM ATT ANROPA LIKNANDE INSTANSMETODER I SUBKLASSEN SOM
+    // ÖVERSKUGGAR METODEN I SUPERKLASSEN OCH SOM TILLHÖR DETTA OBJEKT
+    // DYNAMISK BINDNING - geFODER METODEN SÖKS NERIFRÅN OCH UPPÅT I KLASSHIERARKIN 
     
     
     /**
      * Metod getName. När denna metod anropas genom Interface Ifoder så sker
-     * Dynamisk bindning och Polymorfism nerifrån och uppåt i arvhierarkin
+     * Polymorfism. Dynamisk bindning sker nerifrån och uppåt i arvhierarkin
      * @return namn på ett Hund objekt
      */
     @Override
@@ -56,8 +56,8 @@ public class Hund extends Djur implements Ifoder {
     }
     /**
      * void Metod gefoder
-     * När denna metod anropas genom Gränssnittet Ifoder så sker dynamisk 
-     * bindning och polymorfism
+     * När denna metod anropas genom Gränssnittet Ifoder så söks korrekta metoden 
+     * genom dynamisk bindning. Utförs just denna metod så är det polymorfism
      */
     @Override
     public void gefoder(){

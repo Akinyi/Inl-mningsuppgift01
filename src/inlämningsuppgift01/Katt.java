@@ -24,8 +24,8 @@ public class Katt extends Djur implements Ifoder {
  
     /**
      * Metod getName. När en metod getName anropas så söker Virtuella Java Maskin
-     * igenom arvhierarkin tills den hittar den rätta metoden. Om namnet som söks
-     * är samma som Ove eller Venus så hämtas de härifrån
+     * igenom arvhierarkin tills den hittar just denna metod för respektive objekt.
+     * Om namnet som söks är samma som Ove eller Venus så hämtas de härifrån
      * @return namn på ett Katt objekt
      */
     @Override
@@ -51,8 +51,11 @@ public class Katt extends Djur implements Ifoder {
     
     /**
      * metod gefoder som anger namnet på katten och vikten kattfoder. Denna metod
-     * överskuggar superklassen Djurs metod gefoder. Detta är ett exempel på
-     * Polymorfism och dynamisk bindning
+     * överskuggar superklassen Djurs metod gefoder. När Interface Ifoder anropar 
+     * metoden gefoder så sker en JVM sökning nerifrån och uppåt tills just denna 
+     * metod hittas och genomförs. Detta är Dynamisk Bindning.
+     * Genomförs denna metod så har polymorfism hänt.
+     * 
      */
     @Override
     public void gefoder(){

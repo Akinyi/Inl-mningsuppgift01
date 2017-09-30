@@ -19,15 +19,16 @@ public class Inlämningsuppgift01  {
  */
     protected Inlämningsuppgift01(){
     
-      // DYNAMISK BINDNING GENOM ATT LIST<Ifoder> ifo SKAPAS SOM I SIN TUR FÅR
+      // LIST<Ifoder> ifo SKAPAS SOM I SIN TUR FÅR
       // NYA REFERENSVARIABLER TILL SUBKLASSERNA HUND, KATT OCH ORM. DESSA LÄGGS
       // IN I LISTAN MED METODEN add(new klass(namn, vikt, boolean));
       // I WHILE LOOPEN SÅ FÅR DIETCOACHEN EN DIALOGRUTA DÄR HEN FÅR SKRIVA IN 
-      // DJURETS NAMN. NAMNET JÄMFÖRS MED VARJE DJUR I VARJE SUBKLASS MED METODEN
-      // getName.  SKRIVS NAMNET FEL SÅ FÅR COACHEN SKRIVA OM DET. NÄR DET RÄTTA 
+      // DJURETS NAMN. NAMNET JÄMFÖRS NERIFRÅN OCH UPPÅT I ARVSHIERARKIN MED 
+      // VARJE DJUR I VARJE SUBKLASS MED METODEN getName.  DETTA ÄR POLYMORFISM. 
+      // SKRIVS NAMNET FEL SÅ FÅR COACHEN SKRIVA OM DET. NÄR DET RÄTTA 
       // NAMNET HAR HITTATS SÅ ANROPAR GRÄNSSNITTET ifo DEN RESPEKTIVA METODEN 
       // gefoder I SUBKLASS.HÄR SKER DYNAMISK BINDNING.
-      // POLYMORFISM - VARJE GÅNG METOD gefoder ANROPAS SÅ SÖKER DEN NERIFRÅN 
+      // DYNAMISK BINDNING - VARJE GÅNG METOD gefoder ANROPAS SÅ SÖKER DEN NERIFRÅN 
       // OCH UPPÅT I SUBKLASSERNA TILLS DEN HITTAR DEN RÄTTA METODEN SOM DÅ UTFÖRS.
       // DIETCOACHEN FÅR EN DIALOGRUTA DÄR DET STÅR NAMNET PÅ DJURET, ANTAL GRAM
       // FODER OCH TYP AV DJURFODER.
@@ -37,6 +38,9 @@ public class Inlämningsuppgift01  {
        ifo.add(new Katt("Venus", 5000.0, true));
        ifo.add(new Katt("Ove", 3000.0, true));
        ifo.add(new Orm("Hypno", 1000.0, true));
+      // Om ett sjätte djur läggs in i Listan t.ex.ifo.add(new Orm("Sixten", 2500, true)); 
+      // skulle två djur ha samma namn. Utskriften blir då foder för varje djur. 
+      // Dietcoachen behöver då bekräfta vilket djur som ska matas.
        
         boolean again = true;
         while (again){
@@ -44,12 +48,13 @@ public class Inlämningsuppgift01  {
             if (s == null)
                 break;
            for(Ifoder a: ifo)
-           if(s.equalsIgnoreCase(a.getName()))
-               a.gefoder();
+           if(s.equalsIgnoreCase(a.getName())) // Polymorfism - En ny variant av samma metod anropas
+               a.gefoder(); // Polymorfism - En ny variant av samma metod anropas beroende på object som hittas
         }
        
 /*
        //===================================================================
+        // ALTERNATIVT JÄMFÖRELSE 
          Ifoder i1 = new Hund("Sixten", 5000.0, true);
          Ifoder i2 = new Hund("Dogge", 10000.0, true);
          Ifoder i3 = new Katt("Venus", 5000.0, true);
@@ -95,7 +100,7 @@ public class Inlämningsuppgift01  {
     
     public static void main(String[] args) {
      /**
-      * Skapar en instansvariabel av klassen Inlämingsuppgift01
+      * Skapar ett objekt av klassen Inlämingsuppgift01
       */   
      Inlämningsuppgift01 in = new Inlämningsuppgift01();
     }

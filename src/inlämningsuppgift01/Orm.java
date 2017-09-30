@@ -22,8 +22,8 @@ public class Orm extends Djur implements Ifoder {
     /**
      * överskuggande metod getName returnerar namn på ett Orm objekt
      * @return namn
-     * Polymorfism och dynamisk bindning sker om ormens namn skrivs ut när denna
-     * metod anropas
+     * Polymorfism sker om ormens namn skrivs ut när denna metod anropas.
+     * Dynamisk bindning sker genom en sökning nerifrån och uppåt genom arvshierarkin.
      */
     @Override
     public String getName(){
@@ -45,8 +45,9 @@ public class Orm extends Djur implements Ifoder {
         return vikt;
     }
     /**
-     * Metod gefoder som överskuggar Klassen Djurs metod gefoder. Anropas Orms
-     * gefoder metod så sker polymorfism och dynamisk bindning.
+     * Metod gefoder som överskuggar Klassen Djurs metod gefoder. Anropas 
+     * gefoder metod för Klassen Orm och ett respektive objekt så sker dynamisk bindning 
+     * och när denna metod utförs så har polymorfism hänt.
      */
     @Override
     public void gefoder(){
