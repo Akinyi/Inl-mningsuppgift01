@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package inlämningsuppgift01;
 
 
@@ -12,8 +8,9 @@ package inlämningsuppgift01;
  * @author Akinyi
  * 
  * Superklassen Djur skapas. Den implementerar Interface Ifoder 
- * De instansvariablerna är inkapslade med ordet 'protected' vilket skyddar dem
- * från att ändras utifrån klassen. Konstruktorn Djur inkapslas också med protected.
+ * De instansvariablerna String namn, double vikt och boolean djur är inkapslade
+ * med ordet 'protected' vilket skyddar dem från att ändras utifrån klassen. 
+ * Konstruktorn Djur inkapslas också med protected.
  * Initiering av instansvariablerna behöver vara public så att subklasserna kan 
  * komma åt dem. Metoderna getName, printName, getVikt, gefoder, ärDjur behöver 
  * också vara åtkomliga av subklasserna.

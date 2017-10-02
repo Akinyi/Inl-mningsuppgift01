@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package inlämningsuppgift01;
 
 import java.util.ArrayList;
@@ -12,9 +8,10 @@ import javax.swing.JOptionPane;
 /**
  *
  * @author AKINYI OCHOLLA
- * KLASS HUND EXTENDS SUPERKLASSEN DJUR OCH IMPLEMENTERAR GRÄNSSNITTET Ifoder
- * EN PROTECTED KONSTRUKTOR SER TILL ATT INSTANSVARIABLERNA INTE ÄNDRAS UTIFRÅN 
- * 
+ *
+ * Klass Hund extends Superklasen Djur och implementerar gränssnittet Ifoder
+ * En protected Konstruktor ser till att instansvariablerna String n, double v, 
+ * boolean djur inte ändras utifrån klass Hund.
  *
  */
 public class Hund extends Djur implements Ifoder {
@@ -23,16 +20,11 @@ public class Hund extends Djur implements Ifoder {
         super(n,v,djur);
         namn = n; vikt = v; djur = true;
     }
-    
-
-    // POLYMORFISM GENOM ATT ANROPA LIKNANDE INSTANSMETODER I SUBKLASSEN SOM
-    // ÖVERSKUGGAR METODEN I SUPERKLASSEN OCH SOM TILLHÖR DETTA OBJEKT
-    // DYNAMISK BINDNING - geFODER METODEN SÖKS NERIFRÅN OCH UPPÅT I KLASSHIERARKIN 
-    
-    
+       
     /**
-     * Metod getName. När denna metod anropas genom Interface Ifoder så sker
-     * Polymorfism. Dynamisk bindning sker nerifrån och uppåt i arvhierarkin
+     * Metod getName. När denna överskuggande metod anropas genom Interface 
+     * Ifoder så sker Polymorfism. Dynamisk bindning sker nerifrån och uppåt
+     * i arvhierarkin.
      * @return namn på ett Hund objekt
      */
     @Override
@@ -56,8 +48,9 @@ public class Hund extends Djur implements Ifoder {
     }
     /**
      * void Metod gefoder
-     * När denna metod anropas genom Gränssnittet Ifoder så söks korrekta metoden 
-     * genom dynamisk bindning. Utförs just denna metod så är det polymorfism
+     * När denna metod anropas genom Gränssnittet Ifoder så har den korrekta 
+     * metoden hittats genom dynamisk bindning. 
+     * Utförs just denna metod så är det polymorfism
      */
     @Override
     public void gefoder(){

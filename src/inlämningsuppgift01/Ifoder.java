@@ -12,7 +12,7 @@ package inlämningsuppgift01;
  * @author ägare
  */
 public interface Ifoder {
-  // INTERFACE Ifoder ÄR EN ABSTRACT KLASS 
+  // INTERFACE Ifoder ÄR EN ABSTRACT KLASS. Dess metoder innehåller inga satsar
     public void gefoder();
     public String getName();
     public void printName();
