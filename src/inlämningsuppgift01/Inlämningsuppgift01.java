@@ -17,8 +17,8 @@ public class Inlämningsuppgift01  {
     
       
       /**
-       * List<Ifoder> skapas som i sin tur får nya referensvariabler till subklasserna
-       * Hund, Katt och Orm. Dessa läggs in i Listan med metoden 
+       * List<Ifoder> skapas som i sin tur får nya referensvariabler till objekterna 
+       * i subklasserna Hund, Katt och Orm. Dessa läggs in i Listan med metoden 
        * add(new klass(namn, vikt, boolean)); I while loopen så får Dietcoached en 
        * Dialogruta där hen får skriva in djurets namn. Namnet jämförs nerifrån
        * och uppåt i arvshierarkin med varje djur i varje subklass med metoden
@@ -48,8 +48,8 @@ public class Inlämningsuppgift01  {
             if (s == null)
                 break;
            for(Ifoder a: ifo)
-           if(s.equalsIgnoreCase(a.getName())) // Polymorfism - En ny variant av samma metod anropas
-               a.gefoder(); // Polymorfism - En ny variant av samma metod anropas beroende på object som hittas
+           if(s.equalsIgnoreCase(a.getName())) // Polymorfism - samma metod anropas men för en separat klass och annat objekt i varje loop
+               a.gefoder(); // Polymorfism - samma metod anropas men utförs bara på aktuellt object som hittas
         }
        
     }

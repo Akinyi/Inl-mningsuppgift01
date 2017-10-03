@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 /**
  *
  * @author Akinyi
- * En subklass till Djur skapas som heter Orm. Den implementerar Ifoder
+ * En subklass till Djur skapas som heter Orm. Den implementerar Interface Ifoder
  * Dess konstruktor är protected för att skydda instansvariablerna
  */
 public class Orm extends Djur implements Ifoder {
@@ -22,7 +22,7 @@ public class Orm extends Djur implements Ifoder {
     /**
      * överskuggande metod getName returnerar namn på ett Orm objekt
      * @return namn
-     * Polymorfism sker om ormens namn skrivs ut när denna metod anropas.
+     * Polymorfism sker om ormens namn 'Hypno' skrivs ut när denna metod anropas.
      * Dynamisk bindning sker genom en sökning nerifrån och uppåt genom arvshierarkin.
      */
     @Override
