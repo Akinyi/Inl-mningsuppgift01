@@ -7,8 +7,6 @@ import javax.swing.JOptionPane;
 
 /**
  * Klass Katt extends Superklasen Djur och implementerar gränssnittet Ifoder
- * En protected Konstruktor ser till att instansvariablerna String n, double v, 
- * boolean djur inte ändras utifrån klass Katt.
  * @author Akinyi Ocholla
  */
 public class Katt extends Djur implements Ifoder {
