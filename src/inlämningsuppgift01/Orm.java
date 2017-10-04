@@ -32,7 +32,8 @@ public class Orm extends Djur implements Ifoder {
     }
    
     /**
-     * överskuggande metod getVikt för subklassen Orm
+     * överskuggande metod getVikt för subklassen Orm. Anropas denna metod
+     * så sker polymorfism. Metoden nås genom Dynamisk bindning.
      * @return vikt
      */
     @Override

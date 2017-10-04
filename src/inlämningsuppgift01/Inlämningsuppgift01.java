@@ -49,6 +49,8 @@ public class Inlämningsuppgift01  {
            for(Ifoder a: ifo)
            if(s.equalsIgnoreCase(a.getName())) // Polymorfism - samma metod anropas men för en separat klass och annat objekt i varje loop
                a.gefoder(); // Polymorfism - samma metod anropas men utförs bara på aktuellt object som hittas
+           
+           
         }
        
     }

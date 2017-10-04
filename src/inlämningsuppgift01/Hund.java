@@ -33,7 +33,8 @@ public class Hund extends Djur implements Ifoder {
     }
     
     /**
-     * Metod getVikt
+     * Metod getVikt. När denna metod anropas så sker polymorfism. Metoden 
+     * nås genom dynamisk bindning nerifrån och uppåt.
      * @return vikt
      */
     @Override
