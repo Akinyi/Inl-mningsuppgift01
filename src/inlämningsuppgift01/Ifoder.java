@@ -15,6 +15,6 @@ public interface Ifoder {
   // INTERFACE Ifoder ÄR EN ABSTRACT KLASS. Dess metoder innehåller inga kroppar
     public void gefoder();
     public String getName();
-    //public double getVikt();
-    //public boolean ärDjur();
+    public double getVikt();
+    public boolean ärDjur();
 }

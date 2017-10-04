@@ -48,7 +48,8 @@ public class Hund extends Djur implements Ifoder {
      */
     @Override
     public void gefoder(){
-        JOptionPane.showMessageDialog(null, namn + " : " + (int)vikt/100 +  " gm hundfoder");
+        JOptionPane.showMessageDialog(null,(int)getVikt()/100 + 
+                " gm hundfoder för " + getName());
     }
     /**
      * boolean metod ärDjur

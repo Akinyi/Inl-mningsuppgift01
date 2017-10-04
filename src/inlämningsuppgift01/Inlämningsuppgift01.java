@@ -29,7 +29,10 @@ public class Inlämningsuppgift01  {
        * Resultatet är en polymorfism. När den utförs för klass Hund sker polymorfism.
        * När det utförs för subklassen Katt så sker Polymorfism. Händer det för
        * subklassen Orm så sker också polymorfism.Dietcoachen får en Dialogruta
-       * som visar Djurets namn, antal gram foder och typ av djurfoder
+       * som visar Djurets namn, antal gram foder och typ av djurfoder.
+       * Om ett sjätte djur läggs in i Listan t.ex.ifo.add(new Orm("Sixten", 2500, true)); 
+       * skulle två djur ha samma namn. Utskriften blir då antal gram foder 
+       * och typ foder för varje djur. 
        */
        List<Ifoder> ifo = new ArrayList<>();   
        ifo.add(new Hund("Sixten", 5000, true));
@@ -37,11 +40,7 @@ public class Inlämningsuppgift01  {
        ifo.add(new Katt("Venus", 5000.0, true));
        ifo.add(new Katt("Ove", 3000.0, true));
        ifo.add(new Orm("Hypno", 1000.0, true));
-      // Om ett sjätte djur läggs in i Listan t.ex.ifo.add(new Orm("Sixten", 2500, true)); 
-      // skulle två djur ha samma namn. Utskriften blir då antal gram foder 
-      // och typ foder för varje djur. 
-      // Dietcoachen skulle då behöva bekräfta vilket djur som ska matas.
-       
+      
         boolean again = true;
         while (again){
             String s = JOptionPane.showInputDialog(" Vilket djur ska få mat? \nAnge ett namn.");
@@ -54,7 +53,7 @@ public class Inlämningsuppgift01  {
        
     }
     /**
-     * Main metoden som är public static
+     * Main metoden som är public static void
      * @param args 
      */
     

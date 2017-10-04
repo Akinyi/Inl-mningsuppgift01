@@ -39,7 +39,8 @@ public class Katt extends Djur implements Ifoder {
     }
         
     /**
-     * metod getVikt
+     * metod getVikt. När den anropas så sker polymorfism. Metoden nås genom 
+     * dynamisk bindning.
      * @return vikt
      */
     @Override
@@ -57,7 +58,8 @@ public class Katt extends Djur implements Ifoder {
      */
     @Override
     public void gefoder(){
-        JOptionPane.showMessageDialog(null, namn + " : " + (int)vikt/150 +  " gm kattfoder.");
+        JOptionPane.showMessageDialog(null, (int)getVikt()/150 + 
+                " gm kattfoder för " + getName());
     }
     
     /**

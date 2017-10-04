@@ -8,7 +8,8 @@ import javax.swing.JOptionPane;
 /**
  *
  * @author Akinyi
- * En subklass till Djur skapas som heter Orm. Den implementerar Interface Ifoder
+ * En subklass till klassen Djur skapas som heter Orm. Den implementerar Interface 
+ * Ifoder.
  * Dess konstruktor är protected för att skydda instansvariablerna
  */
 public class Orm extends Djur implements Ifoder {
@@ -45,7 +46,7 @@ public class Orm extends Djur implements Ifoder {
      */
     @Override
     public void gefoder(){
-        JOptionPane.showMessageDialog(null, namn + " : " +  20 +  " gm ormpellets");
+        JOptionPane.showMessageDialog(null, 20 + " gm ormpellets för " + getName());
     }
     
     /**
