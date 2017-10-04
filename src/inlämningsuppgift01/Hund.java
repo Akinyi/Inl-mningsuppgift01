@@ -16,28 +16,22 @@ import javax.swing.JOptionPane;
  */
 public class Hund extends Djur implements Ifoder {
     
-    protected Hund(String n, double v, boolean djur){
-        super(n,v,djur);
-        namn = n; vikt = v; djur = true;
+    protected Hund(String n, double v, boolean dj){
+        super(n,v,dj);
+        namn = n; vikt = v; djur = dj;
     }
        
     /**
      * Metod getName. När denna överskuggande metod anropas genom Interface 
      * Ifoder så sker Polymorfism. Dynamisk bindning sker nerifrån och uppåt
-     * i arvhierarkin.
+     * i arvhierarkin tills den hittar metoden.
      * @return namn på ett Hund objekt
      */
     @Override
     public String getName(){
         return namn;
     }
-    /**
-     * void metod printName 
-     */
-    @Override
-    public void printName(){
-        JOptionPane.showMessageDialog(null, namn);
-    }
+    
     /**
      * Metod getVikt
      * @return vikt

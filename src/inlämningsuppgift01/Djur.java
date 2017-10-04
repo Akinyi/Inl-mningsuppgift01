@@ -1,8 +1,6 @@
 
 package inlämningsuppgift01;
 
-
-
 /**
  *
  * @author Akinyi
@@ -31,13 +29,7 @@ package inlämningsuppgift01;
     public String getName(){
         return namn;
     }
-    /**
-     * Metod printName
-     * 
-     */
-    public void printName(){
-        
-    }
+   
     /**
      * Metod getVikt
      * @return vikt

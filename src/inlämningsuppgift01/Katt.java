@@ -17,11 +17,11 @@ public class Katt extends Djur implements Ifoder {
      * Inkapslade protected klass Katt
      * @param n
      * @param v
-     * @param djur
+     * @param dj
      */
-    protected Katt(String n, double v, boolean djur){
-        super(n,v, djur);
-        namn = n; vikt = v; djur = true;
+    protected Katt(String n, double v, boolean dj){
+        super(n,v, dj);
+        namn = n; vikt = v; djur = dj;
     }
  
     /**
@@ -37,14 +37,7 @@ public class Katt extends Djur implements Ifoder {
     public String getName(){
         return namn;
     }
-    /**
-     * En void metod printName som kan användas för att skriva ut respektiva namn
-     */
-    @Override
-    public void printName(){
-        JOptionPane.showMessageDialog(null, namn);
-    }
-    
+        
     /**
      * metod getVikt
      * @return vikt

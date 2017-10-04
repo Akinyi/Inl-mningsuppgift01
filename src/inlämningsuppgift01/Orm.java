@@ -13,9 +13,9 @@ import javax.swing.JOptionPane;
  */
 public class Orm extends Djur implements Ifoder {
     
-    protected Orm (String n, double v, boolean djur){
-        super(n,v, djur);
-        namn = n; vikt = v; djur = true;
+    protected Orm (String n, double v, boolean dj){
+        super(n,v, dj);
+        namn = n; vikt = v; djur = dj;
     }
 
 
@@ -29,13 +29,7 @@ public class Orm extends Djur implements Ifoder {
     public String getName(){
         return namn;
     }
-    /**
-     * överskuggande metoden printName
-     */
-    @Override
-    public void printName(){
-        JOptionPane.showMessageDialog(null, namn);
-    }
+   
     /**
      * överskuggande metod getVikt för subklassen Orm
      * @return vikt
