@@ -7,7 +7,7 @@ package inlämningsuppgift01;
  * 
  * Superklassen Djur skapas. Den implementerar Interface Ifoder 
  * De instansvariablerna String namn, double vikt och boolean djur är inkapslade
- * med ordet 'protected' vilket skyddar dem från att ändras utifrån klassen. 
+ * med ordet 'protected' vilket skyddar dem från att ändras utifrån klassen & package. 
  * Konstruktorn Djur inkapslas också med protected.
  * Initiering av instansvariablerna behöver vara public så att subklasserna kan 
  * komma åt dem. Metoderna getName, printName, getVikt, gefoder, ärDjur behöver 
