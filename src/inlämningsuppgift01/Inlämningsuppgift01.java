@@ -29,13 +29,13 @@ public class Inlämningsuppgift01  {
        * Resultatet är en polymorfism. När den utförs för klass Hund sker polymorfism.
        * När det utförs för subklassen Katt så sker Polymorfism. Händer det för
        * subklassen Orm så sker också polymorfism.Dietcoachen får en Dialogruta
-       * som visar Djurets namn, antal gram foder och typ av djurfoder.
+       * som visar  antal gram foder och typ av djurfoder för djuret.
        * Om ett sjätte djur läggs in i Listan t.ex.ifo.add(new Orm("Sixten", 2500, true)); 
        * skulle två djur ha samma namn. Utskriften blir då antal gram foder 
        * och typ foder för varje djur. 
        */
        List<Ifoder> ifo = new ArrayList<>();   
-       ifo.add(new Hund("Sixten", 5000, true));
+       ifo.add(new Hund("Sixten", 5000.0, true));
        ifo.add(new Hund("Dogge", 10000.0, true));
        ifo.add(new Katt("Venus", 5000.0, true));
        ifo.add(new Katt("Ove", 3000.0, true));
@@ -49,7 +49,7 @@ public class Inlämningsuppgift01  {
            for(Ifoder a: ifo)
            if(s.equalsIgnoreCase(a.getName())) // Varje metod kollas genom Dynamisk Bindning. Polymorfism - metoden anropas men för en separat klass och objekt i varje loop
                a.gefoder(); // Varje metod kollas genom Dynamisk bingning. Polymorfism sker - metoden anropas men utförs bara på aktuellt object som hittas
-           
+               
         }
        
     }

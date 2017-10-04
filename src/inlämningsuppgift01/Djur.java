@@ -3,7 +3,7 @@ package inlämningsuppgift01;
 
 /**
  *
- * @author Akinyi
+ * @author Akinyi Ocholla
  * 
  * Superklassen Djur skapas. Den implementerar Interface Ifoder 
  * De instansvariablerna String namn, double vikt och boolean djur är inkapslade
@@ -14,9 +14,9 @@ package inlämningsuppgift01;
  * också vara åtkomliga av subklasserna.
  */
     public class Djur implements Ifoder {
-    protected String namn;
-    protected double vikt;
-    protected boolean djur;
+    private String namn;
+    private double vikt;
+    private boolean djur;
     
     protected Djur(){}
     public Djur(String n, double v, boolean dj){
@@ -34,7 +34,7 @@ package inlämningsuppgift01;
      * Metod getVikt
      * @return vikt
      */
-    public double getVikt(){
+    protected double getVikt(){
         return vikt;
     }
     /**
@@ -47,7 +47,7 @@ package inlämningsuppgift01;
      * Boolean metod ärDjur
      * @return djur
      */
-    public boolean ärDjur(){
+    private boolean ärDjur(){
         return djur;
     }
     

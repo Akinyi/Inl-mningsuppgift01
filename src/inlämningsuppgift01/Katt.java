@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
  * Klass Katt extends Superklasen Djur och implementerar gränssnittet Ifoder
  * En protected Konstruktor ser till att instansvariablerna String n, double v, 
  * boolean djur inte ändras utifrån klass Katt.
- * @author ägare
+ * @author Akinyi Ocholla
  */
 public class Katt extends Djur implements Ifoder {
    
@@ -19,9 +19,9 @@ public class Katt extends Djur implements Ifoder {
      * @param v
      * @param dj
      */
-    protected Katt(String n, double v, boolean dj){
+    Katt(String n, double v, boolean dj){
         super(n,v, dj);
-        namn = n; vikt = v; djur = dj;
+        
     }
  
     /**
@@ -33,20 +33,20 @@ public class Katt extends Djur implements Ifoder {
      * Om namnet som söks är samma som Ove eller Venus så hämtas de härifrån
      * @return namn 
      */
-    @Override
-    public String getName(){
-        return namn;
-    }
+//    @Override
+//    public String getName(){
+//        return namn;
+//    }
         
     /**
      * metod getVikt. När den anropas så sker polymorfism. Metoden nås genom 
      * dynamisk bindning.
      * @return vikt
      */
-    @Override
-    public double getVikt(){
-        return vikt;
-    }
+//    @Override
+//    public double getVikt(){
+//        return vikt;
+//    }
     
     /**
      * metod gefoder som anger namnet på katten och vikten kattfoder. Denna metod
@@ -66,8 +66,8 @@ public class Katt extends Djur implements Ifoder {
      * boolean metod ärDjur
      * @return djur om djurets egenskap är true.
      */
-    @Override
-    public boolean ärDjur(){
-        return djur;
-    }
+//    @Override
+//    public boolean ärDjur(){
+//        return djur;
+//    }
 }

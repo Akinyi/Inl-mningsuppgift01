@@ -16,9 +16,8 @@ import javax.swing.JOptionPane;
  */
 public class Hund extends Djur implements Ifoder {
     
-    protected Hund(String n, double v, boolean dj){
+    Hund(String n, double v, boolean dj){
         super(n,v,dj);
-        namn = n; vikt = v; djur = dj;
     }
        
     /**
@@ -27,20 +26,20 @@ public class Hund extends Djur implements Ifoder {
      * i arvhierarkin tills den hittar metoden.
      * @return namn på ett Hund objekt
      */
-    @Override
-    public String getName(){
-        return namn;
-    }
+//    @Override
+//    public String getName(){
+//        return namn;
+//    }
     
     /**
      * Metod getVikt. När denna metod anropas så sker polymorfism. Metoden 
      * nås genom dynamisk bindning nerifrån och uppåt.
      * @return vikt
      */
-    @Override
-    public double getVikt(){
-        return vikt;
-    }
+//    @Override
+//    public double getVikt(){
+//        return vikt;
+//    }
     /**
      * void Metod gefoder
      * När denna metod anropas genom Gränssnittet Ifoder så har den korrekta 
@@ -56,8 +55,8 @@ public class Hund extends Djur implements Ifoder {
      * boolean metod ärDjur
      * @return djur
      */
-    @Override
-    public boolean ärDjur(){
-        return djur;
-    }
+//    @Override
+//    public boolean ärDjur(){
+//        return djur;
+//    }
 }
