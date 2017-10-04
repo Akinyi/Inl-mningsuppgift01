@@ -10,8 +10,7 @@ import javax.swing.JOptionPane;
  * @author AKINYI OCHOLLA
  *
  * Klass Hund extends Superklasen Djur och implementerar gränssnittet Ifoder
- * En protected Konstruktor ser till att instansvariablerna String n, double v, 
- * boolean djur inte ändras utifrån klass Hund.
+ * 
  *
  */
 public class Hund extends Djur implements Ifoder {

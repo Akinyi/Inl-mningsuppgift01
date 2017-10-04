@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class Katt extends Djur implements Ifoder {
    
     /**
-     * Inkapslade protected klass Katt
+     * klass Katt
      * @param n
      * @param v
      * @param dj

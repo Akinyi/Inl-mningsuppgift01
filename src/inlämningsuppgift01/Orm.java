@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
  * @author Akinyi Ocholla
  * En subklass till klassen Djur skapas som heter Orm. Den implementerar Interface 
  * Ifoder.
- * Dess konstruktor är protected för att skydda instansvariablerna
+ * 
  */
 public class Orm extends Djur implements Ifoder {
     
