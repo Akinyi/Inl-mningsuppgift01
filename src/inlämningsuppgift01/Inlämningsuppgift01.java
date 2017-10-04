@@ -43,7 +43,7 @@ public class Inlämningsuppgift01  {
       
         boolean again = true;
         while (again){
-            String s = JOptionPane.showInputDialog(" Vilket djur ska få mat? \nAnge ett namn.");
+            String s = JOptionPane.showInputDialog(" Vilket djur ska få mat? ");
             if (s == null)
                 break;
            for(Ifoder a: ifo)
